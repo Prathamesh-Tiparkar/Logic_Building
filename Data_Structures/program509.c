@@ -1,0 +1,25 @@
+// RECURSION
+// Iteration code using static storage class
+
+#include<stdio.h>
+
+void Display()
+{
+    static int i = 0;
+
+    i = 1;          // reinitialization issue
+    
+    if(i <= 4)
+    {
+        printf("Jay Ganesh...\n");
+        i++;
+        Display();      
+    }
+}
+
+int main()
+{
+    Display();          
+
+    return 0;
+}
